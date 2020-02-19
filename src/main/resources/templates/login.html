@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--head部分-->
+<link rel="stylesheet" href="/css/login.css">
+<head th:include="layout :: htmllayout" th:with="title='后台管理'">
+
+</head>
+
+<!--<style>-->
+<!--    body{-->
+<!--        background-repeat: no-repeat;-->
+<!--        background-size:100% 100%;-->
+<!--        background-attachment: fixed;-->
+<!--    }-->
+<!--</style>-->
+
+<body background="/images/01.jpg" >
+<form class="layui-form" id="userLogin" action="">
+    <div class="container">
+<!--        <button class="close" title="关闭">X</button>-->
+        <div class="layui-form-mid ">
+            <p id="titleId" >XX后台管理系统</p>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" name="sysUserName" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密 &nbsp;&nbsp;码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="sysUserPwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+<!--             <div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">验证码</label>
+            <div class="layui-input-inline">
+                <input type="text" name="code" required  lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input verity">
+            </div>
+             <div class="layui-form-mid layui-word-aux"><img src="/verCode"></div>
+        </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">记住密码</label>
+            <div class="layui-input-block">
+              <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+            </div>
+         </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="login">登录</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+<script type="text/javascript" src="/js/login.js"></script>
+</body>
+</html>
